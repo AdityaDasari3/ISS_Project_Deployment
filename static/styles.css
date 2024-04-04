@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    line-height: 1.5; /* Increase line spacing */
+    font-weight: 400;
+}
+
+.container {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: royalblue;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600; /* Make headings thicker */
+}
+
+p {
+    font-weight: 500; /* Slightly thicker text for readability */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"],
+
+
+button {
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500; 
+    margin-bottom: 15px;
+}
+
+button:hover {
+    transform: translateY(-5px);
+}
+
+#imageGallery {
+    float: right;
+    width: 30%;
+    height: 100vh; 
+    overflow-y: auto; 
+    background-color: aqua;
+    border: 1px solid #ccc; 
+}
+
+#userImages {
+    width: 100%; /* Ensure images are not too wide */
+    max-width: 100%; /* Add this to make images responsive */
+    margin-bottom: 20px;
+}
+
+#videoSection {
+
+        background-color: #f2f2f2; /* Light grey background */
+        padding: 20px;
+        margin: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+}
+
+#videoBox {
+    width: 65%;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#videoPreview {
+    width: 100%; /* Full width of the container */
+    max-height: 60vh; /* Limit the height to leave space for the download button */
+}
+
+#downloadVideo {
+    margin-top: 20px; /* Add space above the download button */
+    display: block; /* Ensure it's always visible */
+    background-color: #007bff; /* A visible color for the button */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline from the link */
+    text-align: center;
+}
+.image-item {
+    transition: transform 0.2s; /* Smooth transition for size change */
+}
+.selected {
+    transform: scale(1.1); /* Scale up the image slightly when selected */
+    border: 2px solid blue; /* Optionally add a border to highlight selected images */
+}
+
+#content {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 90%; /* Adjust based on layout */
+}
+
+
+#videoPreview {
+    width: 100%; /* Full width of its container */
+    height: auto; /* Maintain aspect ratio */
+}

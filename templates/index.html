@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body style="background-color: royalblue">
+    <div class="container">
+        <div id="loginSection">
+            <h1>Welcome to Our Photo-to-Video Converter</h1>
+            <p>Hello, welcome to this free website where anyone can easily make a video with photos. Welcome to our unique service where your cherished photos come to life! Dive into the magical world of storytelling with our easy-to-use platform that turns your static images into dynamic videos. Capture the essence of your memories </p>
+            <p> Get Started by Logging in or Signing up</p>
+            <a href="/login"><button>Login</button></a>
+            <a href="/signup"><button>Sign Up</button></a>
+        </div>
+        <div id="loggedInSection" style="display: none;">
+            <h1>Welcome, <span id="loggedInUsername"></span>!</h1>
+            <button id="logoutBtn" style="display: none;" onclick="logout()">Logout</button>
+            <h2>Upload Images</h2>
+            <button id="uploadBtn">Upload Images</button>
+            <input type="file" id="fileInput" style="display: none;" accept="image/*">
+            <div id="dragDropBox" style="border: 2px dashed #ccc; padding: 20px; text-align: center;">
+                <p>Drag and drop your pictures here.</p>
+            </div>
+
+            <div>
+                <p>To choose photos and create your video click the button below.</p>
+                <a href="/video"><button>Create Your Video</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+
+

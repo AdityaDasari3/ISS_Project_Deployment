@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Video</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+         select {
+            margin: 10px 0;
+            padding: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="videoSection">
+        <h1>Create Your Video</h1>
+        <p>Select the images you want in your video from the column on the right side of this page.</p>
+
+        <div id="videoOptions">
+            <label for="resolution">Resolution:</label>
+            <select id="resolution">
+                <option value="360p">360p</option>
+                <option value="480p">480p</option>
+                <option value="720p">720p</option>
+            </select>
+
+            <label for="audioMood">Audio:</label>
+            <select id="audioMood">
+                <option value="Sad">Sad</option>
+                <option value="Happy">Happy</option>
+                <option value="Epic">Epic</option>
+            </select>
+        </div>
+        <button id="createVideoBtn">Make Video</button>
+    </div>
+    <div id="content">
+        <div id="videoBox">
+            <h2>Preview Your Video</h2>
+            <video id="videoPreview" controls></video>
+            <a id="downloadVideo" style="display: none;">Download Video</a>
+        </div>
+        
+        <div id="imageGallery">
+            <h2>Your Images</h2>
+            <div id="userImages">
+                <!-- Images will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
